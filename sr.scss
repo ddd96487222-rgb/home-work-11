@@ -1,0 +1,209 @@
+@for $i from 1 to 1000 {
+    .w-#{$i} {
+        width: #{$i}px;
+    }
+
+    .h-#{$i} {
+        height: #{$i}px;
+    }
+
+    .m-#{$i} {
+        margin: #{$i}px;
+    }
+
+    .ml-#{$i} {
+        margin-left: #{$i}px;
+    }
+
+    .mr-#{$i} {
+        margin-right: #{$i}px;
+    }
+
+    .mt-#{$i} {
+        margin-top: #{$i}px;
+    }
+
+    .mb-#{$i} {
+        margin-bottom: #{$i}px;
+    }
+
+    
+
+    .top-#{$i} {
+        top: #{$i}px;
+    }
+
+    .left-#{$i} {
+        left: #{$i}px;
+    }
+
+    .right-#{$i} {
+        right: #{$i}px;
+    }
+
+    .bot-#{$i} {
+        bottom: #{$i}px;
+    }
+
+    .z-#{$i} {
+        z-index: $i;
+    }
+
+    .or-#{$i} {
+        order: $i;
+    }
+    .fn-#{$i} {
+        font-size: #{$i*1%};
+    }
+}
+@for $i from 0 to 100 {
+    .bw-#{$i} {
+        border-width: #{$i}px;
+    }
+    .px-#{$i} {
+        padding: 0px #{$i}px;
+    }
+    .py-#{$i} {
+        padding: #{$i}px 0px;
+    }
+    .brr-#{$i} {
+        border-radius: #{$i}px;
+    }
+    .gp-#{$i} {
+        gap: #{$i}px;
+    }
+    
+}
+$border-style-list: solid, dotted, dashed, double, inset, outset;
+@each $i in $border-style-list{
+    .brs-#{$i} {
+        border-style: $i;
+    }
+} 
+
+$colors-list:white, red, green, blue;
+
+@each $i in $colors-list {
+    .bg-#{$i} {
+        background-color: $i;
+    }
+    .#{$i}{
+        color: $i;
+    }
+    .bc-#{$i} {
+        border-color: $i;
+    }
+}
+
+$bg-img-map: (
+    image-1: "./img.png",
+    image-2: "./img.png",
+);
+@each $name, $value in $bg-img-map{
+    .#{$name}{
+        background-image: url($value);
+    }
+}
+
+$display: inline, block, inline-block, flex, grid, none;
+@each $i in $display{
+    .#{$i} {
+        display: $i;
+    }
+} 
+
+$justify: (
+    st: start,
+    en: end,
+    cnt: center,
+    spb: space-between,
+    spe: space-evenly,
+    spa: space-around
+);
+@each $name, $value in $justify{
+    .jc-#{$name} {
+        justify-content: $value;
+    }
+} 
+
+$align-map: (
+    cnt :center,
+    st:start,
+    en:end
+);
+
+@each $name , $value in $align-map {
+    .al-#{$name} {
+        align-items: $value;
+    }
+}
+
+@for $i from 1 to 12 {
+    .gtr-#{$i} {
+        grid-template-rows: repeat($i, 1fr);
+    }
+    .gtc-#{$i} {
+        grid-template-columns: repeat($i, 1fr);
+    }
+    .col-start-#{$i}{
+        grid-column-start: $i;
+    }
+    .col-end-#{$i}{
+        grid-column-end: $i;
+    }
+    .row-start-#{$i}{
+        grid-row-start: $i;
+    }
+    .row-end-#{$i}{
+        grid-row-end: $i;
+    }
+}
+
+$position-map: (
+    ab:absolute,
+    rk:relative,
+    fx:fixed
+);
+
+@each $name , $value in $position-map {
+    .ps-#{$name} {
+        position: $value;
+    }
+}
+
+$text-map: (
+    cnt :center,
+    st:start,
+    en:end
+);
+
+@each $name , $value in $text-map {
+    .tx-#{$name} {
+        text-align: $value;
+    }
+}
+
+$flex-decoration-map: (
+    col :column,
+    colrew:column-reverse,
+    rw:row,
+    rowr:row-reverse
+);
+
+@each $name , $value in $flex-decoration-map {
+    .txdc-#{$name} {
+        flex-direction: $value;
+    }
+}
+
+$flex-wrap-map: (
+    wr :wrap,
+    colrew:nowrap,
+
+);
+
+@each $name , $value in $flex-wrap-map {
+    .fw-#{$name} {
+        flex-wrap: $value;
+    }
+}
