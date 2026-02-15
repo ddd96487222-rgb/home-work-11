@@ -72,6 +72,10 @@
     .gp-#{$i} {
         gap: #{$i}px;
     }
+     .p-#{$i} {
+        padding: #{$i}px;
+    }
+    
     
 }
 $border-style-list: solid, dotted, dashed, double, inset, outset;
@@ -96,9 +100,17 @@ $colors-list:white, red, green, blue;
 }
 
 $bg-img-map: (
-    image-1: "./img.png",
-    image-2: "./img.png",
+    
+    
 );
+.bg-hero {
+    background-image: url(./img/main-pic-bg.png);
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat; 
+    width: 100%;                  
+    height: 400px;                
+}
 @each $name, $value in $bg-img-map{
     .#{$name}{
         background-image: url($value);
