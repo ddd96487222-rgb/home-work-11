@@ -90,7 +90,7 @@ $border-style-list: solid, dotted, dashed, double, inset, outset;
     }
 } 
 
-$colors-list:white, red, lime, blue ;
+$colors-list:white, red, lime, blue,green ;
 
 @each $i in $colors-list {
     .bg-#{$i} {

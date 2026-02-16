@@ -74810,6 +74810,18 @@
   border-color: blue;
 }
 
+.bg-green {
+  background-color: green;
+}
+
+.green {
+  color: green;
+}
+
+.bc-green {
+  border-color: green;
+}
+
 .bg-hero {
   background-image: url("./img/95ec454fe06cf4fd80fe22463ebe2ce121057975.jpg");
   background-size: cover;
