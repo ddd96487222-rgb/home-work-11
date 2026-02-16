@@ -90,7 +90,7 @@ $border-style-list: solid, dotted, dashed, double, inset, outset;
     }
 } 
 
-$colors-list:white, red, lime, blue ;
+$colors-list:white, red, lime, blue,green ;
 
 @each $i in $colors-list {
     .bg-#{$i} {
@@ -227,6 +227,30 @@ $flex-wrap-map: (
     }
 }
 .sc-4{
-    background-color: #ff9900 ;
+    background-color:white ;
+    padding: 10px;
+}
+@for $i from 1 to 12 {
+    @for $j from 1 to 500 {
+        .gtrrr-#{$i}-#{$j}{
+            grid-template-rows: repeat($i, $j*1px);
+        }
+        .gtrf-#{$i}-#{$j}{
+            grid-template-rows: repeat($i, $j*1%);
+        }
+        .gtcc-#{$i}-#{$j}{
+            grid-template-columns: repeat($i, $j*1px);
+        }
+        .gtcf-#{$i}-#{$j}{
+            grid-template-columns: repeat($i, $j*1%);
+        }
+    }
+}
+.sc-6{
+    background-color: #EAF5ED;
+    padding: 10px;
+}
+.box-1{
+    background-color: #e9e8e8;
     padding: 10px;
 }
