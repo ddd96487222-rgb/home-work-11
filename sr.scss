@@ -1,4 +1,4 @@
-@for $i from 1 to 1000 {
+@for $i from 1 to 1200 {
     .w-#{$i} {
         width: #{$i}px;
     }
@@ -55,6 +55,9 @@
     .fn-#{$i} {
         font-size: #{$i*1%};
     }
+     .fnn-#{$i} {
+        font-size: #{$i}px;
+    }
 }
 @for $i from 0 to 100 {
     .bw-#{$i} {
@@ -72,6 +75,10 @@
     .gp-#{$i} {
         gap: #{$i}px;
     }
+     .p-#{$i} {
+        padding: #{$i}px;
+    }
+    
     
 }
 $border-style-list: solid, dotted, dashed, double, inset, outset;
@@ -96,9 +103,18 @@ $colors-list:white, red, green, blue;
 }
 
 $bg-img-map: (
-    image-1: "./img.png",
-    image-2: "./img.png",
+    
+    
 );
+.bg-hero {
+    background-image: url("./img/95ec454fe06cf4fd80fe22463ebe2ce121057975.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+ 
+
+   
+}
 @each $name, $value in $bg-img-map{
     .#{$name}{
         background-image: url($value);
