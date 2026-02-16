@@ -78,7 +78,9 @@
      .p-#{$i} {
         padding: #{$i}px;
     }
-    
+      .wf-#{$i} {
+        border-color: #{$i*1%};
+    }
     
 }
 $border-style-list: solid, dotted, dashed, double, inset, outset;
@@ -88,7 +90,7 @@ $border-style-list: solid, dotted, dashed, double, inset, outset;
     }
 } 
 
-$colors-list:white, red, green, blue;
+$colors-list:white, red, lime, blue ;
 
 @each $i in $colors-list {
     .bg-#{$i} {
@@ -100,6 +102,7 @@ $colors-list:white, red, green, blue;
     .bc-#{$i} {
         border-color: $i;
     }
+   
 }
 
 $bg-img-map: (
@@ -222,4 +225,8 @@ $flex-wrap-map: (
     .fw-#{$name} {
         flex-wrap: $value;
     }
+}
+.sc-4{
+    background-color: #ff9900 ;
+    padding: 10px;
 }
